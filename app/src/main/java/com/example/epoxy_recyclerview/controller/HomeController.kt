@@ -1,11 +1,13 @@
-package com.example.epoxy_recyclerview
+package com.example.epoxy_recyclerview.controller
 
 import com.airbnb.epoxy.AsyncEpoxyController
 import com.airbnb.epoxy.Carousel
 import com.airbnb.epoxy.carousel
 import com.example.epoxy_recyclerview.data.Message
 import com.example.epoxy_recyclerview.data.Profile
-import com.example.epoxy_recyclerview.data.RecentlyActiveItemModel_
+import com.example.epoxy_recyclerview.model.RecentlyActiveItemModel_
+import com.example.epoxy_recyclerview.model.headerItem
+import com.example.epoxy_recyclerview.model.messageItem
 
 class HomeController : AsyncEpoxyController() {
 
@@ -14,6 +16,7 @@ class HomeController : AsyncEpoxyController() {
             field = value
             requestModelBuild()
         }
+
     var allMessages: List<Message> = emptyList()
         set(value) {
             field = value

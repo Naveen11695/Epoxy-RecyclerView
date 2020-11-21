@@ -15,6 +15,6 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/view_holder_message_item" />
+        tools:listitem="@layout/view_holder_message_list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
