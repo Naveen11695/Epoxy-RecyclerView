@@ -22,30 +22,30 @@ class MainActivity : AppCompatActivity() {
          *  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Dynamic Epoxy RecyclerView code >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
          */
 
-        val controller = HomeController()
+      /*  val controller = HomeController()
         messagesView.setController(controller)
 
         controller.allMessages = Data.messages
-        controller.recentlyActive = Data.recentlyActive
+        controller.recentlyActive = Data.recentlyActive*/
 
 
         /**
          *  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Paging using Epoxy RecyclerView code >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
          */
 
-        /* val pagingController = HomePagingController<Messages>()
+         val pagingController = HomePagingController<Messages>()
 
-           val recyclerView = findViewById<RecyclerView>(R.id.messagesView)
-           recyclerView.layoutManager = LinearLayoutManager(this)
-           recyclerView.adapter = pagingController.adapter
+        val recyclerView = findViewById<RecyclerView>(R.id.messagesView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = pagingController.adapter
 
 
-           val viewModel = ViewModelProviders.of(this).get(ActivityViewModel::class.java)
-           viewModel.pagedList.observe(
-               this,
-               Observer {
-                   pagingController.submitList(it)
-               }
-           )*/
+        val viewModel = ViewModelProviders.of(this).get(ActivityViewModel::class.java)
+        viewModel.pagedList.observe(
+            this,
+            Observer {
+                pagingController.submitList(it)
+            }
+        )
     }
 }
